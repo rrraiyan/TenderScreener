@@ -4,3 +4,4 @@ __pycache__/
 .pytest_cache/
 dist/
 private-docs/
+data/settings_cache.json

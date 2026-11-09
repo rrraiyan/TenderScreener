@@ -9,7 +9,15 @@
  *      Those marks are sent back to the AI as examples, so it learns what BuildNation wants.
  *
  * Setup (once): run setup() from the editor, then Deploy → New deployment → Web app
- *   (Execute as: Me, Who has access: Anyone). See README "Step 3".
+ *   (Execute as: Me, Who has access: Anyone).
+ *
+ * Permissions are kept minimal on purpose. @OnlyCurrentDoc limits the script to THIS spreadsheet
+ * (no access to the owner's other files), and no UI dialogs are used. Google therefore asks only:
+ *   - "See, edit, create and delete only the specific Google Sheets documents that this app is installed in"
+ *   - "Send email as you"
+ * Keep it that way: opening other files, Drive access or pop-up dialogs would each widen the request.
+ *
+ * @OnlyCurrentDoc
  */
 
 const TABS = {
@@ -187,8 +195,7 @@ function setup() {
 
   const msg = 'Setup done.\n\nSecret token (put it in GitHub secret APPS_SCRIPT_TOKEN):\n' + props.getProperty('TOKEN') +
               '\n\nNext: Deploy → New deployment → Web app → Execute as: Me, Who has access: Anyone → copy the Web app URL into GitHub secret APPS_SCRIPT_URL.';
-  Logger.log(msg);
-  try { SpreadsheetApp.getUi().alert(msg); } catch (e) { /* run from editor without UI */ }
+  Logger.log(msg);  // shown in the Execution log under the editor (no dialog: that would need an extra permission)
 }
 
 /** Create a tab with starting content, but never overwrite one that already exists. */

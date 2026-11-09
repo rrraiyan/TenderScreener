@@ -35,6 +35,15 @@ jobs:
       - name: Install
         run: pip install -r requirements.txt
 
+      # Last good copy of the control-panel settings, kept in the Actions cache (not committed,
+      # because it holds recipient addresses and the repo may be public).
+      - name: Restore settings backup
+        uses: actions/cache/restore@v4
+        with:
+          path: data/settings_cache.json
+          key: settings-${{ github.run_id }}
+          restore-keys: settings-
+
       - name: Self-test (offline)
         run: python -m pytest -q
 
@@ -52,13 +61,19 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: python -m agent.main ${{ inputs.dry_run && '--dry-run' || '' }}
 
+      - name: Save settings backup
+        if: always() && hashFiles('data/settings_cache.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: data/settings_cache.json
+          key: settings-${{ github.run_id }}
+
       - name: Save memory of processed notices
         if: always() && !inputs.dry_run
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/seen.json
-          if [ -f data/settings_cache.json ]; then git add data/settings_cache.json; fi
           if git diff --cached --quiet; then echo "no state change"; exit 0; fi
           git commit -m "Update processed notices [skip ci]"
           git pull --rebase --autostash
