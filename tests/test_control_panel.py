@@ -10,7 +10,7 @@ from agent.scorer import Provider, Scorer, Verdict
 DEFAULTS = {"company_profile": "yaml profile", "include_keywords": ["training"], "exclude_keywords": ["hotel"],
             "min_score": 6, "sources": {"undp": True, "egp": True}}
 SHEET = {"company_profile": "sheet profile", "include_keywords": ["LMS", "coaching"], "exclude_keywords": [],
-         "recipients": ["nirjhara@buildnation.com.bd"], "min_score": 8, "sources": {"egp": False},
+         "recipients": ["reviewer@example.com"], "min_score": 8, "sources": {"egp": False},
          "feedback": [{"title": "Supply of laptops", "relevant": False, "verdict": "Not relevant", "note": "goods only"}]}
 
 
@@ -51,7 +51,7 @@ def test_sheet_overrides_defaults_but_empty_columns_do_not_wipe(panel, tmp_path)
     assert cfg["include_keywords"] == ["LMS", "coaching"]
     assert cfg["exclude_keywords"] == ["hotel"]                 # sheet column empty -> keep default
     assert cfg["sources"] == {"undp": True, "egp": False}       # merged, not replaced
-    assert cfg["recipients"] == ["nirjhara@buildnation.com.bd"]
+    assert cfg["recipients"] == ["reviewer@example.com"]
     assert (tmp_path / "cache.json").exists()
 
 

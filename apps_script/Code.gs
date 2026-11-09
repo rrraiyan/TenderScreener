@@ -135,7 +135,7 @@ function setup() {
     [''], ['Do not rename the tabs or the first column of Settings.']]);
 
   tab_(ss, TABS.settings, [['Setting', 'Value', 'What it does'],
-    ['recipients', 'nirjhara@buildnation.com.bd', 'Who gets the digest. Separate several with commas.'],
+    ['recipients', 'name@example.com', 'Who gets the digest. Separate several with commas.'],
     ['min_score', 6, 'AI score (0-10) needed to appear in the email. 7-8 = fewer, stronger leads.'],
     ['lookback_days', 2, 'Days of notices checked each run (overlap is fine: nothing is sent twice).'],
     ['send_when_empty', true, 'Send a short email even when nothing matched (proves the agent is alive).'],
