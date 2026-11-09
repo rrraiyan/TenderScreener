@@ -1,0 +1,65 @@
+name: Daily tender watch
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # 02:00 UTC = 08:00 Dhaka (GitHub may start it up to ~30 min late)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no email, no state change)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # to commit data/seen.json back to the repo
+
+concurrency:
+  group: tender-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    # The daily schedule only runs in the deployment repo (the company copy), where the repository
+    # variable TENDER_WATCH_ENABLED=true is set. The public portfolio copy stays idle: no secrets, no failing runs.
+    if: github.event_name == 'workflow_dispatch' || vars.TENDER_WATCH_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Self-test (offline)
+        run: python -m pytest -q
+
+      - name: Check portals and send digest
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          COHERE_MODEL: ${{ vars.COHERE_MODEL }}
+          APPS_SCRIPT_URL: ${{ secrets.APPS_SCRIPT_URL }}
+          APPS_SCRIPT_TOKEN: ${{ secrets.APPS_SCRIPT_TOKEN }}
+          # Optional alternative to the control panel for sending (SMTP with an app password):
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python -m agent.main ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Save memory of processed notices
+        if: always() && !inputs.dry_run
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seen.json
+          if [ -f data/settings_cache.json ]; then git add data/settings_cache.json; fi
+          if git diff --cached --quiet; then echo "no state change"; exit 0; fi
+          git commit -m "Update processed notices [skip ci]"
+          git pull --rebase --autostash
+          git push

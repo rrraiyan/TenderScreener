@@ -1,0 +1,1910 @@
+
+
+<div role="row" tabindex="0" data-noticeid="318694" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318694"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318694" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318694"
+                           data-agencyid="2795"
+                           data-noticecanbeexpressedinterest="False"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318694" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Production of an awareness-raising film on gender-based violence against migrant
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318694'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+26-Oct-2026 17:00
+            (GMT 0.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">7.4910505350787</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>IOM</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>30000035627</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Djibouti</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318693" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318693"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318693" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318693"
+                           data-agencyid="48"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318693" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Light RFQ _SMSL_Air Ticketing Services-Domestic (RGN//KAW(Kawthaung)//RGN) for ILO Myanmar
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318693'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+21-Oct-2026 05:30
+            (GMT 2.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">1.9285505350787</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>ILO</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>rfx_12673_ROAP</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Myanmar</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318692" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318692"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318692" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318692"
+                           data-agencyid="48"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318692" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Request for Quotation -- Relocation Services for Packing and Transportation of Personal and Household Effects of UN official from New Delhi, India, to Colombo, Sri Lanka
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318692'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+30-Oct-2026 12:30
+            (GMT 2.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">11.2202172017454</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>ILO</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>rfx_12540_ROAP</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Multiple destinations</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318686" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318686"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318686" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318686"
+                           data-agencyid="2795"
+                           data-noticecanbeexpressedinterest="False"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318686" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Mini RFQ for the Starlink Internet Service to Caramon EC 30000035225
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318686'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+29-Oct-2026 09:46
+            (GMT 8.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">9.85644405359722</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>IOM</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>30000035225</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Philippines</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318687" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318687"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318687" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318687"
+                           data-agencyid="26"
+                           data-noticecanbeexpressedinterest="False"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318687" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Institutionalizing Nutrition in Emergencies within Malaysia’s Health and Disaster-Management Systems: Technical Review, Guideline Revision, Operational Tools and Capacity Strengthening
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318687'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+09-Nov-2026 17:00
+            (GMT 8.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">21.1577172017454</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNICEF</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for proposal'>Request for proposal</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>LRPS-2026-9206736 </span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Malaysia</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318688" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318688"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318688" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318688"
+                           data-agencyid="26"
+                           data-noticecanbeexpressedinterest="False"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318688" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Supply and Delivery of ICT &amp; Camera equipment for the Ministry of Health, Samoa
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318688'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+25-Oct-2026 23:59
+            (GMT -12.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">7.28202275730093</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNICEF</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>LRFQ-2026-9206749</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Samoa</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318689" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318689"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318689" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318689"
+                           data-agencyid="66"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318689" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Open Geographically Restricted Competition in Colombia, 
+for the provision of Services related to Technical Coordination, Stakeholde r Engagement, Capacity Building and Knowledge sharing to support the Decarbonization of the Cement Sector in Colombia
+
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318689'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+28-Oct-2026 16:00
+            (GMT 2.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">9.3660505350787</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNIDO</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for proposal'>Request for proposal</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>7000008887</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Colombia</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318690" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318690"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318690" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318690"
+                           data-agencyid="1"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318690" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    UNDP-GTM-00219 Combustible Plataforma Electronica (UA 3591/26)
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318690'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+16-Nov-2026 20:00
+            (GMT -4.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">28.7827172017454</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNDP</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Invitation to bid'>Invitation to bid</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>UNDP-GTM-00219</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Guatemala</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318691" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318691"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318691" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318691"
+                           data-agencyid="1"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318691" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    RFP/2026/029 - Identification, Assessment &amp; Validation of Pasture Reserve Areas
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318691'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+02-Nov-2026 03:00
+            (GMT -4.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">14.074383868412</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+19-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNDP</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for proposal'>Request for proposal</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>UNDP-MNG-00761</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Mongolia</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318681" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318681"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318681" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318681"
+                           data-agencyid="28"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318681" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Supply and delivery of building consumable suppliers for local suppliers 
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318681'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+22-Oct-2026 14:00
+            (GMT 3.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">3.2410505350787</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+18-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNRWA</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>RFQ-WB-0059-0-26</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Palestine, State of</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318680" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318680"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318680" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318680"
+                           data-agencyid="4"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318680" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    WHO/SUD/PROC/2026/0067 - RFP- Adaptation and Finalization of the Community Health Worker (CHW) Training Package on Climate-Related Health Risks (Online and Offline, Arabic and English)
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318680'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+26-Oct-2026 23:59
+            (GMT 2.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">7.69868942396759</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+18-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>WHO</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for proposal'>Request for proposal</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>EM/ACO/SUD/P/0009636</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Sudan</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318683" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318683"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318683" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318683"
+                           data-agencyid="48"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318683" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class='info-tooltip info-tooltip--sustainability'>
+                    <img src='/Styles/Notice/Images/sustainable-procurement-icon-64.png' alt='This procurement opportunity is identified as sustainable' class='info-tooltip__icon info-tooltip__icon--sustainability'/>
+                    <span class='info-tooltip__text info-tooltip__text--sustainability'>This procurement opportunity meets the requirements to be considered as sustainable. Click on the procurement opportunity to learn more.</span>
+                </span>
+            
+                <span class="ungm-title ungm-title--small">
+                    Location salle et restauration-formation &#224; Fianarantsoa
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318683'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+19-Oct-2026 11:00
+            (GMT 2.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">0.15771720174537</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+18-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>ILO</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>rfx_12666_ROAF</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Madagascar</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318682" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318682"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318682" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318682"
+                           data-agencyid="2795"
+                           data-noticecanbeexpressedinterest="False"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318682" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Supply and delivery of finger print device (Ankara - IBG)
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318682'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+02-Nov-2026 12:00
+            (GMT 3.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">14.1577172017454</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+18-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>IOM</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>30000035579</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>T&#252;rkiye</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318669" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318669"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318669" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318669"
+                           data-agencyid="28"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318669" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    LEGAL STRUCTURING AND ADVISORY SERVICES CONCERNING AN INDEPENDENT SUCCESSOR ENTITY TO THE UNRWA MICROFINANCE DEPARTMENT
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318669'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+08-Nov-2026 13:00
+            (GMT 3.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">20.199383868412</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+18-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNRWA</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for proposal'>Request for proposal</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>RFPS-3626000029-(MM)</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Jordan</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<div role="row" tabindex="0" data-noticeid="318668" class="tableRow dataRow notice-table">
+        <div role="cell" class="tableCell editable intendbuttonsHeader resultOptions">
+            <div class="ungm-flex-row ungm-flex-row--space-between ungm-flex-row--small-space-separator">
+                <span class='info-tooltip'>
+                    <a class="save-notice-button"
+                       data-action-url="/Vendor/MyUNGMPro/UnsaveNotice/318668"
+                       href="javascript:void(0);"
+                       style="display: none;">
+                        <svg class="save-notice-button__icon save-notice-button__icon--saved" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <title> Unsave this procurement opportunity. </title>
+                            <path xmlns="http://www.w3.org/2000/svg" d="m35.8 17.75-5.3-5.3 2.1-2.15 3.2 3.2 7.4-7.45 2.15 2.15ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h16.8q-1.15 1.3-1.725 2.775Q27.5 10 27.5 11.75q0 3.35 2.15 5.85 2.15 2.5 5.35 3.05.85.1 1.5.1t1.5-.1V42l-14-6Z" />
+                        </svg>
+                    </a>
+
+                    <a class="save-notice-button" data-action-url="/Vendor/MyUNGMPro/SaveNotice/318668" href="javascript:void(0);" style="display: inline-flex !important;">
+                        <svg class='save-notice-button__icon save-notice-button__icon--idle' xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+                            <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z" />
+                        </svg>
+                    </a>
+                    <span class='info-tooltip__text' style='white-space: normal; left: calc(-240px/2 + 45px/2);'>
+                        Subscribe to <a href='/Public/TenderAlertService' target='_blank'>UNGM Pro</a> to be able to save procurement opportunities.
+                    </span>
+                </span>
+                
+                <div class="table-cell-eoi" style="display: block;">
+                    <input type="button"
+                           value='Express Interest'
+                           class=btnEOI buttonIntend
+                           data-noticeid="318668"
+                           data-agencyid="28"
+                           data-noticecanbeexpressedinterest="True"
+                           title="" />
+
+                </div>
+
+                <div class="table-cell-eoi" style="display: none;">
+                    <input type="button"
+                           value="View Documents"
+                           class="buttonViewDocuments" data-notice-id="318668" />
+                </div>
+
+            </div>
+        </div>
+    <div role="cell" class="tableCell resultTitle">
+        <div class="ungm-flex-row ungm-flex-row--space-between">
+            <div class="ungm-flex-row">
+
+                <span class="ungm-title ungm-title--small">
+                    Supply and Delivery of Vehicle Accessories &amp; Auto body repairs to UNRWA -local suppliers only
+                </span>
+            </div>
+
+            <a target='_blank' href='/Public/Notice/318668'>
+                
+                    <svg class='open-in-new-tab__icon open-in-new-tab__icon--large' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+                        <title>Open in a new window</title>
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    </svg>
+            
+            </a>
+        </div>
+    </div>
+    <div role="cell" class="tableCell resultInfo1 deadline" data-description="Deadline">
+        <span>
+            
+
+27-Oct-2026 14:00
+            (GMT 3.00)
+        </span>
+        <span class="remainingDaysToDeadline" style="display:none">8.2410505350787</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>
+
+18-Oct-2026</span>
+    </div>
+    <div role="cell" class="tableCell resultAgency">
+        <span>UNRWA</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span><label for='Request for quotation'>Request for quotation</label></span>
+    </div>
+    <div role="cell" class="tableCell resultInfo1" data-description="Reference">
+        <span>RFQ-WB-0060-0-26</span>
+    </div>
+    <div role="cell" class="tableCell">
+        <span>Palestine, State of</span>
+    </div>
+
+
+
+</div>
+<script>
+    var deadlineCells = document.querySelectorAll('.tableCell.resultInfo1.deadline span');
+
+    deadlineCells.forEach(function (deadlineCell) {
+        var existingSpan = deadlineCell.parentElement.querySelector('.remainingDays');
+
+        if (!existingSpan) {
+            var remainingDaysInput = deadlineCell.parentElement.querySelector('.remainingDaysToDeadline');
+            var remainingDays = remainingDaysInput ? Number.parseFloat(remainingDaysInput.textContent) : null;
+
+            if (remainingDays != null && remainingDays <= 7) {
+                var remainingDaysSpan = document.createElement('span');
+                remainingDaysSpan.className = 'remainingDays';
+                remainingDaysSpan.style.fontWeight = 'bold';
+                remainingDaysSpan.style.fontSize = '14px';
+
+                if (remainingDays <= 1 && remainingDays >= 0) {
+                    remainingDaysSpan.textContent = 'Expires within 24 hours';
+                } else if (remainingDays <= 7 && remainingDays > 1) {
+                    var expireIn7daysMessage1 = 'Expires within ';
+                    var expireIn7daysMessage2 = ' days';
+                    remainingDaysSpan.textContent = expireIn7daysMessage1 + parseInt(remainingDays) + expireIn7daysMessage2;
+                } else {
+                    var expiredNoticeMessage = 'Expired ';
+                    remainingDaysSpan.textContent = expiredNoticeMessage;
+                }
+
+                deadlineCell.parentElement.appendChild(remainingDaysSpan);
+            }
+        }
+    });
+</script>
+
+
+<script type="text/javascript">
+    // set total value to label               
+    var noticeTotal = "39";
+    var noticeSearchTotalLabelId = "#noticeSearchTotal";    
+
+    var noticeSearchScript = new UNGM.Notice.NoticeSearch({
+        lblNoticeSearchTotalSelector: noticeSearchTotalLabelId
+     });
+    noticeSearchScript.ReAssignSearchTotal(noticeSearchScript.parameter, noticeTotal);
+
+</script>

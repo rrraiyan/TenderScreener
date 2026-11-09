@@ -1,0 +1,117 @@
+# BuildNation Tender Watch configuration. Edit freely; changes apply on the next run.
+
+# Sent to Gemini so it can judge fit. Describe what BuildNation does and wants to grow into.
+company_profile: |
+  BuildNation is a Bangladesh-based edtech company. It designs and delivers training and learning
+  solutions: learning management systems (LMS) and e-learning platforms, digital content and curriculum
+  development, and capacity-building programmes. Training areas include vocational/TVET, professional
+  and soft skills, IT and digital skills, AI, coding/software development, leadership and management.
+  It also provides education/training consultancy, training needs assessments, and the design and
+  facilitation of workshops. It is open to adjacent work (education technology, digital transformation
+  of training institutions, skills programmes, research on skills/education).
+  It can deliver remotely/online anywhere, or in person anywhere in Bangladesh.
+
+# Portals to check (true = on).
+sources:
+  undp: true
+  ungm: true
+  egp: true
+  brac: true
+  smef: true
+
+lookback_days: 2      # overlap so a missed or late run never skips notices; dedup prevents repeats
+min_score: 6          # AI score (0-10) needed to appear in the email
+max_ai_items: 120     # cap on notices sent to Gemini per run (free-tier safety)
+send_when_empty: true # send a short "nothing today" email so silence never hides a broken job
+
+# A notice becomes a candidate if its title/type contains any of these (whole word, case-insensitive).
+include_keywords:
+  - training
+  - trainer
+  - capacity building
+  - capacity development
+  - capacity strengthening
+  - e-learning
+  - elearning
+  - online learning
+  - blended learning
+  - LMS
+  - learning management
+  - learning platform
+  - curriculum
+  - course
+  - courseware
+  - module
+  - content development
+  - TVET
+  - vocational
+  - skills
+  - skill development
+  - upskilling
+  - reskilling
+  - digital literacy
+  - digital skills
+  - ICT
+  - IT
+  - software
+  - AI
+  - artificial intelligence
+  - machine learning
+  - coding
+  - programming
+  - leadership
+  - coaching
+  - mentoring
+  - facilitator
+  - facilitation
+  - workshop
+  - bootcamp
+  - education
+  - edtech
+  - learning
+  - consultancy
+  - consultant
+  - consulting firm
+  - training needs assessment
+  - institutional
+  - expression of interest
+  - EOI
+  - REOI
+  - প্রশিক্ষণ
+  - দক্ষতা
+  - শিক্ষা
+
+# Dropped when the TITLE contains any of these, even if a keyword above matched.
+exclude_keywords:
+  - hotel
+  - catering
+  - venue
+  - conference hall
+  - vehicle
+  - fuel
+  - air ticket
+  - air ticketing
+  - construction of
+  - construction works
+  - civil works
+  - renovation
+  - rehabilitation of
+  - repair
+  - maintenance works
+  - linen
+  - medical
+  - medicine
+  - pharmaceutical
+  - edible oil
+  - spare parts
+  - printing
+  - transport of
+  - overhauling
+  - engine
+  - vertical extension
+  - furniture
+
+# Dropped when the notice TYPE contains any of these. e-GP labels every tender Goods / Works / Services;
+# "Works" is always physical construction.
+exclude_notice_types:
+  - Works
