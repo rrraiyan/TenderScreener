@@ -2,12 +2,13 @@ name: Daily tender watch
 
 on:
   # GitHub's scheduler is best-effort: runs can start late or be dropped entirely, especially at
-  # the top of the hour. So there are three slots (Dhaka time); the first one that succeeds sends
+  # the top of the hour. So there are four slots (Dhaka time); the first one that succeeds sends
   # the digest and the later ones exit immediately (--once-per-day).
   schedule:
     - cron: "37 1 * * *"  # 07:37 Dhaka: main run, usually delivered around 8:00
     - cron: "13 3 * * *"  # 09:13 Dhaka: backup
     - cron: "47 5 * * *"  # 11:47 Dhaka: second backup
+    - cron: "54 8 * * *"  # 14:54 Dhaka: last backup
   workflow_dispatch:
     inputs:
       dry_run:
