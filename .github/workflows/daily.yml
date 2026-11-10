@@ -1,9 +1,10 @@
 name: Daily tender watch
 
 on:
-  # GitHub's scheduler is best-effort: runs can start late or be dropped entirely, especially at
-  # the top of the hour. So there are four slots (Dhaka time); the first one that succeeds sends
-  # the digest and the later ones exit immediately (--once-per-day).
+  # Main daily trigger: the control panel's Apps Script calls workflow_dispatch at 08:00 Dhaka with
+  # once_per_day=true (Google's time triggers are reliable; see installDailyTrigger in Code.gs).
+  # GitHub's own scheduler is best-effort (runs can start late or be dropped entirely), so these
+  # slots remain as backups. The first run that succeeds sends the digest; later ones exit at once.
   schedule:
     - cron: "37 1 * * *"  # 07:37 Dhaka: main run, usually delivered around 8:00
     - cron: "13 3 * * *"  # 09:13 Dhaka: backup
@@ -13,6 +14,10 @@ on:
     inputs:
       dry_run:
         description: "Dry run (no email, no state change)"
+        type: boolean
+        default: false
+      once_per_day:
+        description: "Skip if a daily run already succeeded today (used by the sheet's daily trigger)"
         type: boolean
         default: false
 
@@ -67,7 +72,7 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: python -m agent.main ${{ inputs.dry_run && '--dry-run' || '' }} ${{ github.event_name == 'schedule' && '--once-per-day' || '' }}
+        run: python -m agent.main ${{ inputs.dry_run && '--dry-run' || '' }} ${{ (github.event_name == 'schedule' || inputs.once_per_day) && '--once-per-day' || '' }}
 
       - name: Save settings backup
         if: always() && hashFiles('data/settings_cache.json') != ''
@@ -83,6 +88,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/seen.json
           if git diff --cached --quiet; then echo "no state change"; exit 0; fi
-          git commit -m "Update processed notices [skip ci]"
+          # No "[skip ci]" here: when the newest commit carries it, GitHub can skip scheduled runs too.
+          # (Pushes made with GITHUB_TOKEN never trigger workflows anyway.)
+          git commit -m "Update processed notices"
           git pull --rebase --autostash
           git push

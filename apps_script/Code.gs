@@ -11,10 +11,16 @@
  * Setup (once): run setup() from the editor, then Deploy → New deployment → Web app
  *   (Execute as: Me, Who has access: Anyone).
  *
+ * Daily start (once): put GITHUB_REPO (owner/name) and GITHUB_PAT in Project settings → Script properties,
+ *   then run installDailyTrigger(). Every morning at 08:00 Dhaka, Google then asks GitHub to start the agent.
+ *   (GitHub's own scheduler is unreliable and can skip days; Google's time triggers are not.)
+ *
  * Permissions are kept minimal on purpose. @OnlyCurrentDoc limits the script to THIS spreadsheet
  * (no access to the owner's other files), and no UI dialogs are used. Google therefore asks only:
  *   - "See, edit, create and delete only the specific Google Sheets documents that this app is installed in"
  *   - "Send email as you"
+ *   - "Connect to an external service" + "Allow this application to run when you are not present"
+ *     (only for the daily trigger, which calls api.github.com)
  * Keep it that way: opening other files, Drive access or pop-up dialogs would each widen the request.
  *
  * @OnlyCurrentDoc
@@ -126,6 +132,39 @@ function sendDigest_(req) {
   return { ok: true, sent_to: to.length, logged: rows.length, quota_left: MailApp.getRemainingDailyQuota() };
 }
 
+// ---------------------------------------------------------------- daily start (calls GitHub)
+
+/** Run once from the editor: creates the 08:00 Dhaka trigger (replacing any older one). */
+function installDailyTrigger() {
+  ScriptApp.getProjectTriggers()
+    .filter(t => t.getHandlerFunction() === 'dailyRun')
+    .forEach(t => ScriptApp.deleteTrigger(t));
+  ScriptApp.newTrigger('dailyRun').timeBased().everyDays(1).atHour(8).nearMinute(0)
+    .inTimezone('Asia/Dhaka').create();
+  Logger.log('Daily trigger installed: about 08:00-08:15 Dhaka every day. Testing the GitHub connection now...');
+  dailyRun();
+}
+
+/** Called by the trigger (or run by hand to test): asks GitHub to start the agent workflow. */
+function dailyRun() {
+  const props = PropertiesService.getScriptProperties();
+  const repo = String(props.getProperty('GITHUB_REPO') || '').trim();
+  const pat = String(props.getProperty('GITHUB_PAT') || '').trim();
+  if (!repo || !pat) throw new Error('Add GITHUB_REPO and GITHUB_PAT in Project settings → Script properties.');
+  const res = UrlFetchApp.fetch('https://api.github.com/repos/' + repo + '/actions/workflows/daily.yml/dispatches', {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { Authorization: 'Bearer ' + pat, Accept: 'application/vnd.github+json' },
+    payload: JSON.stringify({ ref: 'main', inputs: { once_per_day: true } }),
+    muteHttpExceptions: true,
+  });
+  if (res.getResponseCode() !== 204) {
+    throw new Error('GitHub refused (' + res.getResponseCode() + '): ' + res.getContentText().slice(0, 300) +
+                    '\nCheck GITHUB_REPO and that the token has Actions: Read and write on that repository.');
+  }
+  Logger.log('GitHub workflow started for ' + repo + '. The email follows in about 5-10 minutes.');
+}
+
 // ---------------------------------------------------------------- one-time setup
 
 function setup() {
@@ -194,7 +233,8 @@ function setup() {
   if (old && ss.getSheets().length > 1) ss.deleteSheet(old);
 
   const msg = 'Setup done.\n\nSecret token (put it in GitHub secret APPS_SCRIPT_TOKEN):\n' + props.getProperty('TOKEN') +
-              '\n\nNext: Deploy → New deployment → Web app → Execute as: Me, Who has access: Anyone → copy the Web app URL into GitHub secret APPS_SCRIPT_URL.';
+              '\n\nNext: Deploy → New deployment → Web app → Execute as: Me, Who has access: Anyone → copy the Web app URL into GitHub secret APPS_SCRIPT_URL.' +
+              '\nThen add Script properties GITHUB_REPO and GITHUB_PAT and run installDailyTrigger().';
   Logger.log(msg);  // shown in the Execution log under the editor (no dialog: that would need an extra permission)
 }
 
