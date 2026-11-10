@@ -65,6 +65,27 @@ def test_one_broken_portal_does_not_stop_the_run(isolated, monkeypatch, capsys):
     assert "Training on AI for teachers" not in capsys.readouterr().out
 
 
+def test_backup_schedule_slot_skips_after_a_successful_scheduled_run(isolated, monkeypatch):
+    monkeypatch.setattr(main, "REGISTRY", {"good": Good})
+    sent = []
+    monkeypatch.setattr(main, "send_email", lambda subject, *a, **k: sent.append(subject))
+    state = isolated / "seen.json"
+
+    main.run(["--state", str(state)])                       # manual run: does not use up the day
+    assert json.loads(state.read_text(encoding="utf-8"))["last_scheduled"] is None
+    main.run(["--once-per-day", "--state", str(state)])     # first scheduled slot sends
+    main.run(["--once-per-day", "--state", str(state)])     # backup slot: nothing
+    assert len(sent) == 2
+
+
+def test_failed_scheduled_run_lets_the_backup_slot_retry(isolated, monkeypatch):
+    monkeypatch.setattr(main, "REGISTRY", {"broken": Broken})
+    monkeypatch.setattr(main, "send_email", lambda *a, **k: None)
+    state = isolated / "seen.json"
+    assert main.run(["--once-per-day", "--state", str(state)]) == 1
+    assert json.loads(state.read_text(encoding="utf-8"))["last_scheduled"] is None
+
+
 def test_all_portals_failing_exits_nonzero(isolated, monkeypatch):
     monkeypatch.setattr(main, "REGISTRY", {"broken": Broken})
     assert main.run(["--dry-run", "--state", str(isolated / "s.json")]) == 1

@@ -16,6 +16,8 @@ class State:
         self.seen: dict[str, str] = data.get("seen", {})
         self.refs: dict[str, str] = data.get("refs", {})
         self.health: dict[str, dict] = data.get("health", {})
+        # Dhaka date of the last successful scheduled run, so backup schedule slots skip once the day is done
+        self.last_scheduled: str | None = data.get("last_scheduled")
 
     def is_seen(self, key: str, norm_ref: str | None) -> bool:
         return key in self.seen or (norm_ref is not None and norm_ref in self.refs)
@@ -43,5 +45,6 @@ class State:
 
     def save(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        payload = {"seen": dict(sorted(self.seen.items())), "refs": dict(sorted(self.refs.items())), "health": self.health}
+        payload = {"seen": dict(sorted(self.seen.items())), "refs": dict(sorted(self.refs.items())), "health": self.health,
+                   "last_scheduled": self.last_scheduled}
         self.path.write_text(json.dumps(payload, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")

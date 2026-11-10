@@ -90,15 +90,20 @@ def run(argv: list[str] | None = None) -> int:
     ap.add_argument("--since", type=int, help="look back N days (default from config)")
     ap.add_argument("--config", default=str(ROOT / "config" / "profile.yaml"))
     ap.add_argument("--state", default=str(ROOT / "data" / "seen.json"))
+    ap.add_argument("--once-per-day", action="store_true",
+                    help="scheduled runs: do nothing if a scheduled run already succeeded today (Dhaka date)")
     args = ap.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     load_env(ROOT / ".env")
-    cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
-    cfg, panel_note = control_panel.load_settings(cfg, ROOT / "data" / "settings_cache.json")
     state = State(Path(args.state))
     run_at = dates.now()
     today = run_at.astimezone(dates.DHAKA).date()
+    if args.once_per_day and state.last_scheduled == today.isoformat():
+        log.info("a scheduled run already succeeded today (%s); nothing to do", today)
+        return 0
+    cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
+    cfg, panel_note = control_panel.load_settings(cfg, ROOT / "data" / "settings_cache.json")
     since = run_at - timedelta(days=args.since or cfg.get("lookback_days", 2))
 
     notices, reports, sources = collect(cfg, args.source, since, state, today)
@@ -150,13 +155,16 @@ def run(argv: list[str] | None = None) -> int:
             send_email(subject, html, text, cfg.get("recipients"))
             log.info("email sent via SMTP: %s", subject)
 
+    all_failed = bool(reports) and all(not r.ok for r in reports)
     if not args.dry_run or args.save_state:
         for n in fresh:
             state.mark(n.key, n.norm_ref, today)
         state.prune(today)
+        if args.once_per_day and not args.dry_run and not all_failed:
+            state.last_scheduled = today.isoformat()   # later backup slots today will skip
         state.save()
 
-    if reports and all(not r.ok for r in reports):
+    if all_failed:
         log.error("every portal failed")
         return 1
     return 0
