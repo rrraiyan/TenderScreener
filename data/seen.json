@@ -158,6 +158,16 @@
   "brac:15824": "2026-11-20",
   "brac:15825": "2026-11-20",
   "brac:15826": "2026-11-21",
+  "brac:15827": "2026-11-22",
+  "brac:15828": "2026-11-22",
+  "brac:15829": "2026-11-22",
+  "brac:15830": "2026-11-22",
+  "brac:15831": "2026-11-22",
+  "brac:15832": "2026-11-22",
+  "brac:15833": "2026-11-22",
+  "brac:15834": "2026-11-22",
+  "brac:15835": "2026-11-22",
+  "brac:15836": "2026-11-22",
   "egp:1221207": "2026-11-10",
   "egp:1249257": "2026-11-10",
   "egp:1276064": "2026-11-16",
@@ -5648,7 +5658,19 @@
   "ungm:323261": "2026-11-21",
   "ungm:323264": "2026-11-21",
   "ungm:323265": "2026-11-21",
-  "ungm:323267": "2026-11-21"
+  "ungm:323267": "2026-11-21",
+  "ungm:323269": "2026-11-22",
+  "ungm:323270": "2026-11-22",
+  "ungm:323271": "2026-11-22",
+  "ungm:323273": "2026-11-22",
+  "ungm:323276": "2026-11-22",
+  "ungm:323277": "2026-11-22",
+  "ungm:323279": "2026-11-22",
+  "ungm:323280": "2026-11-22",
+  "ungm:323281": "2026-11-22",
+  "ungm:323282": "2026-11-22",
+  "ungm:323283": "2026-11-22",
+  "ungm:323284": "2026-11-22"
  },
  "refs": {
   "AMI-CMR-2026": "2026-11-11",
@@ -6064,29 +6086,29 @@
  "health": {
   "undp": {
    "fail_streak": 0,
-   "last_ok": "2026-11-21",
+   "last_ok": "2026-11-22",
    "last_detail": ""
   },
   "ungm": {
    "fail_streak": 0,
-   "last_ok": "2026-11-21",
+   "last_ok": "2026-11-22",
    "last_detail": ""
   },
   "egp": {
-   "fail_streak": 0,
+   "fail_streak": 1,
    "last_ok": "2026-11-21",
-   "last_detail": ""
+   "last_detail": "ConnectionError: HTTPSConnectionPool(host='www.eprocure.gov.bd', port=443): Max retries exceeded with url: /TenderDetailsServlet (Caused by NameResolutionError(\"HTTPSConnection(host='www.eprocure.gov.bd', port=443): Failed to resolve 'www.eprocure.gov.bd' ([Errno -2] Name or service not known)\"))"
   },
   "brac": {
    "fail_streak": 0,
-   "last_ok": "2026-11-21",
+   "last_ok": "2026-11-22",
    "last_detail": ""
   },
   "smef": {
    "fail_streak": 0,
-   "last_ok": "2026-11-21",
+   "last_ok": "2026-11-22",
    "last_detail": ""
   }
  },
- "last_scheduled": "2026-11-21"
+ "last_scheduled": "2026-11-22"
 }
